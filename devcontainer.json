@@ -1,0 +1,15 @@
+{
+  "name": "tcga-loy-demo",
+  "build": {
+    "dockerfile": "Dockerfile",
+    "context": ".."
+  },
+  "settings": {
+    "r.plot.useHttpgd": true
+  },
+  "extensions": [
+    "REditorSupport.r",
+    "ms-toolsai.jupyter"
+  ],
+  "postCreateCommand": "R -e 'TCGAbiolinks::GDCping()'"
+}

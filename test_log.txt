@@ -1,0 +1,30 @@
+[1] "Updated query"
+--------------------------------------
+o GDCquery: Searching in GDC database
+--------------------------------------
+Genome of reference: hg38
+--------------------------------------------
+oo Accessing GDC. This might take a while...
+--------------------------------------------
+ooo Project: TCGA-BRCA
+--------------------
+oo Filtering results
+--------------------
+ooo By data.type
+ooo By workflow.type
+----------------
+oo Checking data
+----------------
+ooo Checking if there are duplicated cases
+ooo Checking if there are results for the query
+-------------------
+o Preparing output
+-------------------
+       results   project           data.category                      data.type
+1 c("3396e.... TCGA-BRCA Transcriptome Profiling Gene Expression Quantification
+  access experimental.strategy platform sample.type barcode workflow.type
+1     NA                    NA       NA          NA      NA STAR - Counts
+[1] "Legacy query"
+Error in GDCquery(project = "TCGA-BRCA", data.category = "Gene expression",  : 
+  unused argument (legacy = TRUE)
+Execution halted

@@ -19,7 +19,7 @@ if (!dir.exists("GDCdata_BRCA_STAR")) {
                  save = TRUE, save.filename = "tcga_brca_se.rds")
 } else {
   # download once, re-use later
-  readRDS(expr, "tcga_brca_se.rds")
+  se <- readRDS(expr, "tcga_brca_se.rds")
 }
 
 cat("Assay names:", assayNames(se), "\n")      # raw_count / fpkm / tpm / fpkm_uq
@@ -27,7 +27,7 @@ cat("Matrix dims :", dim(se), "\n")
 
 # Keep FPKM-UQ
 expr <- assays(se)[["FPKM-UQ"]]
-# saveRDS(expr, "tcga_brca_fpkm_uq.rds") #
+# saveRDS(expr, "tcga_brca_fpkm_uq.rds") # no need, saved tcga_brca_se.rds is good enough
 
 
 # ---- Minimal overall-survival example ----
